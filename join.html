@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2.회원가입</title>
+    <link rel="stylesheet" href="css/jae.css">
+    <link rel="stylesheet" href="css/agreement.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+    <div id="wrap">
+    <!--헤더영역시작-->
+<header id="header">
+        <div class="logo">
+            <a href="jaeyun.html">
+                <img src="img/Logo.png" alt="LOGO">
+            </a>
+        </div>
+            <ul class="main_menu">
+                <li><a href="agreement.html">회원가입</a></li>
+                <li><a href="jaeyun.html">home</a></li>
+                <li><a href="#">주문조회</a></li>
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+     <!--메뉴판 영역 시작-->
+        <nav>
+            <ul class="tab_menu">
+                <li class="dropdown"><a href="#" class="lnb" >어쿠스틱기타</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">마틴-</a> </li>
+                        <li><a href="#">테일러-</a> </li>
+                        <li><a href="#">깁슨-</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">일렉키타</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">깁슨-</a></li>
+                        <li><a href="#">펜더-</a></li>
+                        <li><a href="#">코로나-</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">악세사리</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">피크</a></li>
+                        <li><a href="#">기타줄</a></li>
+                        <li><a href="#">스트랩</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">엠프</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">일렉기타용</a></li>
+                        <li><a href="#">어쿠스틱용</a></li>
+                        <li><a href="#">마이크</a></li>
+                        <li><a href="#">해드셋</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">이펙터</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">파워</a></li>
+                        <li><a href="#">딜레이</a></li>
+                        <li><a href="#">드라이브</a></li>
+                        <li><a href="#">페달</a></li>
+                        <li><a href="#">보드</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+     <!--메뉴판 영역 종료-->
+</header>
+    <!--해더영역 종료-->
+   <!--회원가입 영역 시작-->
+<div id="container">
+    <div id="contents">
+        <div class="section path">
+            <span>현재 위치</span>
+            <ol><li><a href="jaeyun.html">홈</a>
+            </li>
+                <li title="현재 위치">
+                    <strong>회원 가입</strong>
+                </li>
+            </ol></div>
+        <div class="section titleArea">
+            <h2>회원가입</h2>
+        </div>
+        <div class="section ec_base_step">
+            <ol class="step">
+                <li class="selected">
+                    "1. 약관 동의"
+                </li>
+                <li>
+                    "2. 정보입력"
+                </li>
+                <li>3. 가입완료</li>
+            </ol>
+        </div>
+        <div class="xans-element- xans-member xans-member-join memberArea">
+            <div class="titleArea titleArea--middle">
+                <h3>회원인증</h3>
+            </div>
+            <div class="ec-base-table">
+                <table>
+                <caption>회원가입</caption>
+                <colgroup>
+                    <col style="width: 190px;">
+                    <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                    <tr class>
+                        <th scope="row"><img src="img/ico_required.svg" alt="필수">회원구분</th>
+                        <td>
+                            <input id="member_type0" type="radio" name="member_type">
+                            <label for="member_type0">개인회원</label>
+                            <input id="member_type1" type="radio" name="member_type">
+                            <label for="member_type1">사업자회원</label>
+                            <input id="member_type2" type="radio" name="member_type">
+                            <label for="member_type2">외국인회원(foreigner)</label>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="titleArea titleArea--middle">
+                <h3>기본정보</h3>
+                <p class="required"><img src="img/ico_required.svg" alt="필수">필수 입력 사항</p>
+            </div>
+            <div class="ec-base-table">
+                <table>
+                    <caption>회원 기본정보</caption>
+                    <colgroup>
+                        <col style="width: 190px;">
+                        <col style="width: auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">아이디</th>
+                            <td><input id="member_id" name="member_id"  class="inputTypeText" type="text">
+                            <div class="txtInfo">(영문소문자/숫자, 4~16자)</div>
+                            <p id="idMsg" class="txtInfo txtSuccess"></p></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">비밀번호</th>
+                            <td> 
+                                <div><input id="passwd" name="passwd" maxlength="16" type="password"></div>
+                                <div class="txtInfo">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">비밀번호 확인</th>
+                            <td><input id="user_passwd_confirm" name="user_passwd_confirm" maxlength="16" type="password"></td>
+                        
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">비밀번호 확인 질문</th>
+                            <td><select id="hint" name="hint" >
+                                <option value="hint_01">기억에 남는 추억의 장소는?</option>
+                                <option value="hint_02">자신의 인생 좌우명은?</option>
+                                <option value="hint_03">자신의 보물 제1호는?</option>
+                                <option value="hint_04">가장 기억에 남는 선생님 성함은?</option>
+                                <option value="hint_05">타인이 모르는 자신만의 신체비밀이 있다면?</option>
+                                <option value="hint_06">추억하고 싶은 날짜가 있다면?</option>
+                                <option value="hint_07">받았던 선물 중 기억에 남는 독특한 선물은?</option>
+                                <option value="hint_08">유년시절 가장 생각나는 친구 이름은?</option>
+                                <option value="hint_09">인상 깊게 읽은 책 이름은?</option>
+                                <option value="hint_10">읽은 책 중에서 좋아하는 구절이 있다면?</option>
+                                <option value="hint_11">자신이 두번째로 존경하는 인물은?</option>
+                                <option value="hint_12">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
+                                <option value="hint_13">초등학교 때 기억에 남는 짝꿍 이름은?</option>
+                                <option value="hint_14">다시 태어나면 되고 싶은 것은?</option>
+                                <option value="hint_15">내가 좋아하는 캐릭터는?</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">비밀번호 확인 답변</th>
+                            <td><input id="hint_answer" name="hint_answer" class="inputTypeText" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="nameTitle"><img src="img/ico_required.svg" alt="필수">이름</th>
+                            <td><input type="text" name="name" id="name" maxlength="20"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">주소</th>
+                            <td class="formMultiple">
+                                <ul class="ec-address">
+                                    <li id="join_zipcode_wrap" class="ec-address-zipcode">
+                                        <input id="postcode1" name="postcode1" placeholder="우편번호"class="inputTypeText1" type="text" maxlength="14" >
+                                        <button id="postBtn" class="btnBasic" type="button" style="cursor: pointer;">주소검색</button>
+                                        <span class="ec-base-label"></span>
+                                    </li>
+                                    <li id="join_baseAddr_wrap">
+                                    <input id="addr1" name="addr1" placeholder="기본주소" class="inputTypeText2" type="text" size="60" maxlength="100" >
+                                    </li>
+                                    <li id="join_detailAddr_wrap">
+                                    <input id="addr2" name="addr2" placeholder="나머지 주소" class="inputTypeText3" type="text" size="60" maxlength="255">
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">일반번호</th>
+                            <td class="formGroup code"><select id="phone1" name="phone[]"   >
+                                <option value="02">02</option>
+                                <option value="031">031</option>
+                                <option value="032">032</option>
+                                <option value="033">033</option>
+                                <option value="041">041</option>
+                                <option value="042">042</option>
+                                <option value="043">043</option>
+                                <option value="044">044</option>
+                                <option value="051">051</option>
+                                <option value="052">052</option>
+                                <option value="053">053</option>
+                                <option value="054">054</option>
+                                <option value="055">055</option>
+                                <option value="061">061</option>
+                                <option value="062">062</option>
+                                <option value="063">063</option>
+                                <option value="064">064</option>
+                                <option value="0502">0502</option>
+                                <option value="0503">0503</option>
+                                <option value="0504">0504</option>
+                                <option value="0505">0505</option>
+                                <option value="0506">0506</option>
+                                <option value="0507">0507</option>
+                                <option value="070">070</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                                <option value="0508">0508</option>
+                                </select> - <input id="phone2" name="phone[]" maxlength="4" type="text"> -
+                                <input id="phone3" name="phone[]" maxlength="4" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">전화번호</th>
+                            <td class="formGroup code">
+                                <select id="mobile1" name="mobile[]"   >
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                                </select> - <input id="mobile2" name="mobile[]" maxlength="4" type="text"> -
+                                <input id="mobile3" name="mobile[]" maxlength="4" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="img/ico_required.svg" alt="필수">이메일</th>
+                            <td><input id="email1" name="email1" type="text"> <p class="txtInfo" id="emailMsg"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div class="ec-base-button_gBottom">
+            <a href="agreement.html" class="btnNormalFix_sizeM">취소</a>
+            <a href="#" class="btnSubmitFix_sizeM" >가입하기</a>
+         </div>
+        </div>
+    </div>
+</div>
+   <!--회원가입 영역 종료-->
+    <!--푸터영역시작-->
+    <footer id="footer">
+    <div class="inner_t">
+        <div class="info_left">
+            <div class="bt_logo">
+            <a href="#"><img src="img/bt_logo.jpg" alt="bt_logo"></a>
+            </div>
+        <div class="bt_info">
+            <div class="bt_title" data-ez-role="title">쇼핑몰 기본정보</div>
+            <div class="bt_info_list" data-ez-role="list">
+                <div data-ez-item="company_name">
+                    <span data-ez-role="field">상호명</span>
+                    <span data-ez-role="value">경은상사</span> 
+                </div>
+                <div data-ez-item="president_name">
+                    <span data-ez-role="field">대표자명</span>
+                    <span data-ez-role="value">김지화</span>  
+                </div>
+                <div data-ez-item="address">
+                    <span data-ez-role="field">사업장 주소</span> 
+                    <span data-ez-role="value">110707 서울특별시 종로구 삼일대로 428 낙원상가 2층 B-282호</span>
+                </div>
+                <div data-ez-item="phone">
+                    <span data-ez-role="field">대표 전화</span>
+                    <span data-ez-role="value">02-744-6433</span> 
+                </div>
+                <div data-ez-item="company_regno">
+                    <span data-ez-role="field">사업자 등록번호</span>
+                    <span data-ez-role="value">101-22-68983</span>
+                </div>
+                <div data-ez-item="network_regno">
+                    <span data-ez-role="field">통신판매업 신고번호</span>
+                    <span data-ez-role="value">제01-5770호[사업자정보확인]</span>
+                </div>
+                <div data-ez-item="cpo_name">
+                    <span data-ez-role="field">개인정보보호책임자</span>
+                    <span data-ez-role="value">김지화</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="info_right">
+            <div class="bt_util" data-ez-group="shortcut">
+                <ul data-ez-role="list">
+                    <li data-ez-item="company"><a href="#">회사소개</a></li>
+                    <li data-ez-item="agreement"><a href="#">이용약관</a></li>
+                    <li data-ez-item="privacy"><a href="#">개인정보처리방침</a><strong></strong></li>
+                    <li data-ez-item="guide"><a href="#">이용안내</a></li>
+                    <li data-ez-item="user-1gwikac"><a href="#">주차안내</a></li>
+                </ul>
+            </div>
+            <div class="wrap_cs">
+                    <div class="cs_center_txt">
+                     <div class="bt_title"> <strong>고객센터 정보</strong></div>
+                    <div data-ez-item="phone">
+                        <strong>상담/주문전화</strong><br>
+                        <span>02-744-6433</span>
+                    </div>
+                    <div data-ez-item="email">
+                        <strong>상담/주문 이메일</strong>
+                        <span>acousicg@naver.com</span>
+                    </div>
+                    <div data-ez-item="runtime">
+                        <strong>CS운영시간 :</strong><br>
+                        <span>월요일-토요일:10am - 7pm<br> 
+                            일요일 : 12pm - 6pm
+                            <br>
+                            주차장 <br>
+                            서울시 종로구인사동4길18<br>
+                            오라카인사동스위츠<br>지하3층
+                        </span>
+                    </div>
+                </div>
+                    <div class="bank_txt">
+                        <div class="bt_title"> <strong>결제 정보</strong></div>
+                        <div>
+                           <strong>무통장 계좌정보</strong>
+                        </div>
+                        <div>
+                            <div>
+                                <span>국민은행</span><br>
+                                <span>828-01-0164-359 김지화</span> 
+                            </div>
+                            <div>
+                                <span>SC제일은행</span><br>
+                                <span>128-20-126163 김지화</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sns_txt">
+                        <div class="bt_title">SNS</div>
+                        <a href="#">instagram</a> 
+                        <a href="#">youtube</a>
+                        <a href="#">facebook</a>
+                        <a href="#">blog</a>
+                        <a href="#">kakao</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="inner_b">
+            <div class="bt_copyright"> 
+			Copyright © 경은어쿠스틱 쇼핑몰. All Rights Reserved. Hosting by Cafe24 Corp.
+            </div>
+            <div class="bt_escrow">
+                <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAacou6f1">
+                <img src="img/bt_ew_iniapy.png" alt="이니시스">
+                <span>고객님은 안전거래를 위해 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다. [서비스가입정보확인]</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!--푸터영역종료-->
+</body>
+</html>

@@ -1,0 +1,139 @@
+@charset "utf-8";
+.xans-member-join {
+    max-width: 750px;
+    margin: 0 auto;
+}
+.titleArea--middle {
+    margin: 40px 0 10px;
+    text-align: left;
+    height: 100%;
+}
+.xans-member-join .ec-base-table {
+    border-top: 2px solid black;
+}
+table {
+    border: 1px solid #bcbcbc;
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th {
+    border: 1px solid #e0e0e0;
+   padding-left: 16px;
+   font-weight: 400;
+   font-size: 14px;
+   text-align: left;
+}
+td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 22px;
+    vertical-align: middle;
+}
+caption {
+    display: none;
+}
+colgroup {
+    display: table-column-group;
+}
+col {
+    display: table-column;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit; 
+}
+.titleArea h3 {
+    font-weight: 500;
+    display: block;
+}
+.xans-member-join .required {
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+    text-align: right;
+    margin: -10px 0 0;
+}
+.ec-address-zipcode, #join_baseAddr_wrap, #join_detailAddr_wrap {
+    margin: 10px;
+}
+input[type="text"],
+input[type="password"]{
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    padding: 2px 4px 2px 15px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    outline: 1px;
+}
+select {
+    max-width: 100%;
+    height: 40px;
+    padding: 0 20px 0 10px;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    background: #fff url("img/ico_select.png") no-repeat right 10px center;
+    background-size: 14px 8px;
+}
+.ec-base-table .formMultiple {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.ec-address .inputTypeText1 {
+    width: 160px;
+}
+.ec-address .btnBasic {
+    padding: 12px 20px;
+    height: 40px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+    line-height: 1;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+    letter-spacing: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: #000;
+    background-color: #fff;
+}
+.xans-member-join #mobile1, .xans-member-join #mobile2, 
+.xans-member-join #mobile3, .xans-member-join #phone1, 
+.xans-member-join #phone2, .xans-member-join #phone3, 
+.xans-member-join #birth_year, .xans-member-join #marry_year, 
+.xans-member-join #partner_year, .xans-member-join #birth_month, 
+.xans-member-join #marry_month, .xans-member-join #partner_month, 
+.xans-member-join #birth_day, .xans-member-join #marry_day, 
+.xans-member-join #partner_day{
+    width: 100px;
+}
+.xans-member-join .ec-base-button_gBottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+   
+}
+.xans-member-join  .ec-base-button_gBottom .btnNormalFix_sizeM {
+    padding: 20px 150px;
+    border: 1px solid #d0ac88;
+    color: #d0ac88;
+    font-size: 1.2em;
+}
+.xans-member-join .ec-base-button_gBottom .btnSubmitFix_sizeM {
+    padding: 20px 150px;
+    background-color: #d0ac88;
+    color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #d0ac88;
+}

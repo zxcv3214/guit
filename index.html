@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>메인페이지</title>
+    <link rel="stylesheet" href="css/jae.css">
+    <link rel="stylesheet" href="css/agreement.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            $('.mimg').append($('.slide_image').first().clone());
+            $('.mimg').prepend($('.slide_image').eq(-2).clone());
+            let index=1;
+            moveSlider (index);
+            $('.bx-pager-item').click (function () {
+                index=$(this).index();
+                moveSlider(index+1);
+            });
+            $('.slider_image_Left').click(function () {
+                if (index > 1) {
+                    index--;
+                    moveSlider(index);
+                }else {
+                    $('.mimg').css('left',-5000);
+                    index=5;
+                    moveSlider(index);
+                }
+            });
+            $('.slider_image_Right').click(function () {
+                if(index < 5) {
+                    index++;
+                    moveSlider(index);
+                }else {
+                    $('.mimg').css('left',0);
+                    index=0;
+                    moveSlider(index);
+                }
+            });
+            //이미지 슬라이더 구현 함수
+            function moveSlider (index) {
+                $('.mimg').animate ({
+                    left: -(index*1000)
+                },'siow');
+                $('.bx-pager-item').removeClass('active');
+                $('.bx-pager-item').eq(index-1).addClass('active')
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <!--헤더영역시작-->
+    <header id="header">
+        <div class="logo">
+            <a href="jaeyun.html">
+                <img src="img/Logo.png" alt="LOGO">
+            </a>
+        </div>
+            <ul class="main_menu">
+                <li><a href="agreement.html">회원가입</a></li>
+                <li><a href="jaeyun.html">home</a></li>
+                <li><a href="#">주문조회</a></li>
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+     <!--메뉴판 영역 시작-->
+        <nav>
+            <ul class="tab_menu">
+                <li class="dropdown"><a href="#" class="lnb" >어쿠스틱기타</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">마틴-</a> </li>
+                        <li><a href="#">테일러-</a> </li>
+                        <li><a href="#">깁슨-</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">일렉키타</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">깁슨-</a></li>
+                        <li><a href="#">펜더-</a></li>
+                        <li><a href="#">코로나-</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">악세사리</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">피크</a></li>
+                        <li><a href="#">기타줄</a></li>
+                        <li><a href="#">스트랩</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">엠프</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">일렉기타용</a></li>
+                        <li><a href="#">어쿠스틱용</a></li>
+                        <li><a href="#">마이크</a></li>
+                        <li><a href="#">해드셋</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="lnb">이펙터</a>
+                    <ul class="dropdown_content">
+                        <li><a href="#">파워</a></li>
+                        <li><a href="#">딜레이</a></li>
+                        <li><a href="#">드라이브</a></li>
+                        <li><a href="#">페달</a></li>
+                        <li><a href="#">보드</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+     <!--메뉴판 영역 종료-->
+    </header>
+    <!--해더영역 종료-->
+    <!--메인 이미지 영역 시작-->
+    <div class="main_imgs">
+        <div class="mimg">
+            <img class="slide_image" src="img/main1.jpg"  alt="main1">
+            <img class="slide_image" src="img/main2.png"  alt="main2">
+            <img class="slide_image" src="img/main3.png"  alt="main3">
+            <img class="slide_image" src="img/main4.png"  alt="main4">
+            <img class="slide_image" src="img/main5.png"  alt="main5">
+        </div>
+        <div class="img_panel">
+            <div class="bx-pager-item"></div>
+            <div class="bx-pager-item"></div>
+            <div class="bx-pager-item"></div>
+            <div class="bx-pager-item"></div>
+            <div class="bx-pager-item"></div>
+        </div>
+        <div class="left_right_control_panel">
+            <img class="slider_image_Left" src="img/leftArrow.png" alt="leftArrow">
+            <img class="slider_image_Right" src="img/rightArrow.png" alt="rightArrow">
+        </div>    
+    </div>
+    <!--메인 이미지 영역 종료-->
+    <!--섹션1 영역시작-->
+    
+        <div class="main_long_banner">
+            <!--메인 롱배너-->
+            <div class="main_long_banner_txt">
+                <div class="main_long_banner_txt01">연중무휴</div>
+                    <div class="main_long_banner_txt02">
+                        <p>경은어쿠스틱은 365일 연중무휴 영업하고 있습니다.</p>
+                        <p>주자창은 낙원제일주차장과 오라카이 인사동 호텔을 이용하시면 
+                            5만원이상 구매시 1시간 지원해드리고있습니다.</p>
+                            <p><br></p>
+                            <p><strong>낙원매장은 일렉기타 02-744-1212</strong></p>
+                            <p><strong>수입통기타 전시장 및 리페어는 744-1213</strong></p>
+                    </div>
+                    <div class="main_text_link">
+                        <a href="#">자세히 보기</a>
+                    </div>
+            </div><!--main_long_banner_txt-->
+        </div><!--main_long_banner-->
+
+    <!--섹션1 영역종료-->
+    <!--어쿠스틱베스트5 영역시작-->
+    <div class="main_Acoustic_top5">
+        <div class="titletop5">어쿠스틱 베스트 top5</div>
+        <div class="titlegu1img"></div>
+        <ul class="gutop5list">
+            <li>
+                <div class="prdList__item">
+                    <img src="img/D-28.jpg" alt="D-28">
+                    <div class="description">
+                        <h3>모델명:마틴 기타 D-28 Authentic 1937 VTS 
+                            Marin guitar</h3>
+                        <p>가격:10,030,000원</p>
+                    </div>
+                </div> 
+            <li>
+                <div class="prdList__item">
+                   <img src="img/D-45.jpg" alt="D-45">
+                    <div class="description">
+                        <h3>모델명:마틴기타 D-45 Reimagined Martin Guitar</h3>
+                        <p>가격:15,440,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                    <img src="img/414ce-R.jpg" alt="414ce-R">
+                    <div class="description">
+                        <h3>모델명:테일러기타 Tatlor414ce R ES2 V-Class</h3>
+                        <p>가격:4,710,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                    <img src="img/GTe-M.jpg" alt="GTe-M">
+                    <div class="description">
+                        <h3>모델명:테일러기타 GTe 마호가니 Taylor GTe Mahogany</h3>
+                        <p>가격:2,232,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                  <img src="img/P-03M.jpg" alt="P-03M">
+                    <div class="description">
+                        <h3>모델명:라리비 P-03 Larrivee P-03 Mahogany Asian Fit
+                        </h3>
+                        <p>가격:2,660,000원</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--어쿠스틱베스트5 영역종료-->
+    <!--유튜브 리뷰 영역 시작-->
+    <div class="wrap_video_box">
+        <div class="video_name"><h3>기타관련 유튜브 영상</h3></div>
+        <div class="main_video_box">
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/feBw0zO57Qw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="main_video_title">
+            <div class="main_title_txt01"> 유튜브로 다양한 제품의 영상을 확인해보세요</div>
+        </div>
+    </div>
+    <!--유튜브 리뷰 영역 종료-->
+    <!--일랙기타 베스트5영역시작-->
+    <div class="main_electric_top5">
+        <div class="titletop5">일렉기타베스트 top5</div>
+        <div class="titlegu1img"></div>
+        <ul class="gutop5list">
+            <li>
+                <div class="prdList__item">
+                <img src="img/fenden60s.png" alt="fenden60s">
+                    <div class="description">
+                        <h3>모델명:펜더 60S Fender Traditional 60S
+                            Stratocaster (3TS/RW)
+                        </h3>
+                        <p>가격:1,449,000원</p>
+                    </div>
+                </div>
+            <li>
+                <div class="prdList__item">
+                    <img src="img/fenden50s.png" alt="fenden50s">
+                    <div class="description">
+                        <h3>모델명:펜더 50s Fender Traditional 50s
+                            Stratocaster (2TS/MN)
+                        </h3>
+                        <p>가격:1,449,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                   <img src="img/fenden50sd.png" alt="fenden50sd">
+                    <div class="description">
+                        <h3>모델명:펜더 50s Fender Traditional 50s
+                            Telecaster (WBL)
+                        </h3>
+                        <p>가격:1,449,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                    <img src="img/fenden60sd.png" alt="fenden60sd">
+                    <div class="description">
+                        <h3>모델명:펜더 60s Fender Traditional 60s
+                            Telecaster (V.WT)
+                        </h3>
+                        <p>가격:1,449,000원</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="prdList__item">
+                <img src="img/Corona1.png" alt="Corona1">
+                    <div class="description">
+                        <h3>모델명:코로나 Corona - Modern Standard T</h3>
+                        <p>가격:448,000원</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--일랙기타 베스트5영역종료-->
+    <!--푸터영역시작-->
+    <footer id="footer">
+    <div class="inner_t">
+        <div class="info_left">
+            <div class="bt_logo">
+            <a href="#"><img src="img/bt_logo.jpg" alt="bt_logo"></a>
+            </div>
+        <div class="bt_info">
+            <div class="bt_title" data-ez-role="title">쇼핑몰 기본정보</div>
+            <div class="bt_info_list" data-ez-role="list">
+                <div data-ez-item="company_name">
+                    <span data-ez-role="field">상호명</span>
+                    <span data-ez-role="value">경은상사</span> 
+                </div>
+                <div data-ez-item="president_name">
+                    <span data-ez-role="field">대표자명</span>
+                    <span data-ez-role="value">김지화</span>  
+                </div>
+                <div data-ez-item="address">
+                    <span data-ez-role="field">사업장 주소</span> 
+                    <span data-ez-role="value">110707 서울특별시 종로구 삼일대로 428 낙원상가 2층 B-282호</span>
+                </div>
+                <div data-ez-item="phone">
+                    <span data-ez-role="field">대표 전화</span>
+                    <span data-ez-role="value">02-744-6433</span> 
+                </div>
+                <div data-ez-item="company_regno">
+                    <span data-ez-role="field">사업자 등록번호</span>
+                    <span data-ez-role="value">101-22-68983</span>
+                </div>
+                <div data-ez-item="network_regno">
+                    <span data-ez-role="field">통신판매업 신고번호</span>
+                    <span data-ez-role="value">제01-5770호[사업자정보확인]</span>
+                </div>
+                <div data-ez-item="cpo_name">
+                    <span data-ez-role="field">개인정보보호책임자</span>
+                    <span data-ez-role="value">김지화</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="info_right">
+            <div class="bt_util" data-ez-group="shortcut">
+                <ul data-ez-role="list">
+                    <li data-ez-item="company"><a href="#">회사소개</a></li>
+                    <li data-ez-item="agreement"><a href="#">이용약관</a></li>
+                    <li data-ez-item="privacy"><a href="#">개인정보처리방침</a><strong></strong></li>
+                    <li data-ez-item="guide"><a href="#">이용안내</a></li>
+                    <li data-ez-item="user-1gwikac"><a href="#">주차안내</a></li>
+                </ul>
+            </div>
+            <div class="wrap_cs">
+                    <div class="cs_center_txt">
+                     <div class="bt_title"> <strong>고객센터 정보</strong></div>
+                    <div data-ez-item="phone">
+                        <strong>상담/주문전화</strong><br>
+                        <span>02-744-6433</span>
+                    </div>
+                    <div data-ez-item="email">
+                        <strong>상담/주문 이메일</strong>
+                        <span>acousicg@naver.com</span>
+                    </div>
+                    <div data-ez-item="runtime">
+                        <strong>CS운영시간 :</strong><br>
+                        <span>월요일-토요일:10am - 7pm<br> 
+                            일요일 : 12pm - 6pm
+                            <br>
+                            주차장 <br>
+                            서울시 종로구인사동4길18<br>
+                            오라카인사동스위츠<br>지하3층
+                        </span>
+                    </div>
+                </div>
+                    <div class="bank_txt">
+                        <div class="bt_title"> <strong>결제 정보</strong></div>
+                        <div>
+                           <strong>무통장 계좌정보</strong>
+                        </div>
+                        <div>
+                            <div>
+                                <span>국민은행</span><br>
+                                <span>828-01-0164-359 김지화</span> 
+                            </div>
+                            <div>
+                                <span>SC제일은행</span><br>
+                                <span>128-20-126163 김지화</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sns_txt">
+                        <div class="bt_title">SNS</div>
+                        <a href="#">instagram</a> 
+                        <a href="#">youtube</a>
+                        <a href="#">facebook</a>
+                        <a href="#">blog</a>
+                        <a href="#">kakao</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="inner_b">
+            <div class="bt_copyright"> 
+			Copyright © 경은어쿠스틱 쇼핑몰. All Rights Reserved. Hosting by Cafe24 Corp.
+            </div>
+            <div class="bt_escrow">
+                <a href="https://iniweb.inicis.com/popup/common/popup_escrow_notice.jsp?mid=ECAacou6f1">
+                <img src="img/bt_ew_iniapy.png" alt="이니시스">
+                <span>고객님은 안전거래를 위해 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다. [서비스가입정보확인]</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>   
+<!--푸터영역종료-->
+</body>
+</html>
