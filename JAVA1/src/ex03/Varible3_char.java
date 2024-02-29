@@ -13,8 +13,9 @@ public class Varible3_char {
 		 */
 		char c4 = 65; // 영문'A' 를 의미
 		char c5 = '\uAC00'; // 한글 유니코드'가'를 의미
-		int s = 1234;
+		
 		System.out.println("c4=" + c4 + "c5=" + c5);
-
+		int s = 1234;
+		System.out.println(s);
 	}
 }
